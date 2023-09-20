@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Image Gallery</title>
+    <style>
+        .image-container {
+            width: 300px;
+            overflow: hidden;
+        }
+
+        .image-slider {
+            display: flex;
+            animation: slide 5s linear infinite;
+        }
+
+        .image {
+            width: 300px;
+            height: 200px;
+            margin-right: 10px;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(-200%);
+            }
+            75% {
+                transform: translateX(-300%);
+            }
+            100% {
+                transform: translateX(-400%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <div class="image-slider">
+            <img class="image" src="static\images\R1_Hyatt-Hyderabad-P099-Room.16x9.webp" alt="Image 1">
+            <img class="image" src="static\images\R1_Hyatt-Hyderabad-P099-Room.16x9.webp" alt="Image 2">
+            <img class="image" src="static\images\R1_Hyatt-Hyderabad-P099-Room.16x9.webp" alt="Image 3">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+ <!-- <section class="room-details">
+        <h2>Rooms</h2>
+
+<div>
+    <section>
+        <div id="mainflash" class="carousel slide" data-bs-ride="carousel" data-interval="200">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images/R1_Hyatt-Hyderabad-P099-Room.16x9.webp' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <!--
+                <h5 class="display-1 align-self-center">Make Your Plan</h5>
+                <h5 class="display-1">Enjoy Your Vacation</h5>
+                -->
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/R1_Hyatt-Hyderabad-P099-Room.16x9.webp' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/R1_Hyatt-Hyderabad-P099-Room.16x9.webp' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/R1_Hyatt-Hyderabad-P099-Room.16x9.webp' %}" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainflash" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainflash" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</section>
+
+</div>
+
+
+
+        <img
+              src="{% static 'images/R1_Hyatt-Hyderabad-P099-Room.16x9.webp' %}"
+              alt="logo"
+              width="150"
+              height="70"
+            />
+        <p>Located in the heart of the city, Hyatt Pune is a silent retreat in the midst of the bustling city. Its 209 indulgent guestrooms include 12 suites that blends understated elegance and worldclass interiors. Our rooms and suites are thoughtfully designed to delight you and make your stay a memorable experience</p>
+        <p>Price per night: ${{ room.price }}</p>
+        <p>Max occupancy: {{ room.max_occupancy }} guests</p>
+        <p>Bed Type: {{ room.bed_type }}</p>
+        <!-- Add more room details as needed -->
+    </section>

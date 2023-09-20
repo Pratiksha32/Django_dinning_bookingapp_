@@ -1,0 +1,122 @@
+{% extends 'bookingapp\base.html' %} 
+{% load static%}
+
+
+
+
+
+{% block content %}
+
+<!-- <h2>This is menu page .....</h2> -->
+
+
+    <style>
+        /* Add some basic styling here, or link to an external CSS file */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url("{% static 'images/food.webp' %}") ;
+        }
+
+        .container {
+            /* background-image: url("{% static 'images/food.webp' %}") ; */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .menu-type {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            margin-bottom: 20px;
+        }
+
+        .item-name {
+            font-weight: bold;
+        }
+
+        .item-price {
+            color: #007bff;
+        }
+    </style>
+
+    <div class="container" >
+        <h1>Food Menu</h1>
+
+        <!-- Western Cuisine -->
+        <div class="menu-type">Western Cuisine</div>
+        <div class="menu-item">
+            <span class="item-name">Classic Beef Burger</span>
+            <span class="item-price">$12.99</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Grilled Chicken Caesar Salad</span>
+            <span class="item-price">$10.99</span>
+        </div>
+        <!-- Add more Western cuisine items -->
+
+        <!-- Indian Cuisine -->
+        <div class="menu-type">Indian Cuisine</div>
+        <div class="menu-item">
+            <span class="item-name">Chicken Tikka Masala</span>
+            <span class="item-price">$13.99</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Vegetable Biryani</span>
+            <span class="item-price">$11.99</span>
+        </div>
+        <!-- Add more Indian cuisine items -->
+
+        <!-- Italian Cuisine -->
+        <div class="menu-type">Italian Cuisine</div>
+        <div class="menu-item">
+            <span class="item-name">Fettuccine Alfredo</span>
+            <span class="item-price">$12.99</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Margherita Pizza</span>
+            <span class="item-price">$11.99</span>
+        </div>
+        <!-- Add more Italian cuisine items -->
+
+        <!-- Mexican Cuisine -->
+        <div class="menu-type">Mexican Cuisine</div>
+        <div class="menu-item">
+            <span class="item-name">Chicken Enchiladas</span>
+            <span class="item-price">$11.99</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Beef Tacos</span>
+            <span class="item-price">$9.99</span>
+        </div>
+        <!-- Add more Mexican cuisine items -->
+
+        <!-- Maharashtrian Cuisine -->
+        <div class="menu-type">Maharashtrian Cuisine</div>
+        <div class="menu-item">
+            <span class="item-name">Misal Pav</span>
+            <span class="item-price">$8.99</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Vada Pav</span>
+            <span class="item-price">$6.99</span>
+        </div>
+        <!-- Add more Maharashtrian cuisine items -->
+    </div>
+
+
+
+{% endblock content %}

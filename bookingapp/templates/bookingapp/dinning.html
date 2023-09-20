@@ -1,0 +1,170 @@
+{% extends 'bookingapp\base.html' %} 
+{% load static%}
+
+
+
+
+
+{% block content %}
+
+
+<style>
+    *{
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .slideshow-container {
+        position: relative;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+
+    .prev {
+        left: 0;
+        position: absolute;
+    }
+
+    .next {
+        right: 0;
+        position: absolute;
+        
+    }
+</style>
+
+
+
+<div>
+
+
+    <div style="height: 500px;">
+        <img src="{% static 'images/TOP_D.webp' %}" alt="Image 1">
+       
+    </div>
+
+
+
+
+<div class="slideshow-container">
+    
+
+    <div class="mySlides">
+    <h1 style="text-align: center ; color: rgb(233, 160, 16); ">Baan Tao</h1>
+    <div style="color: rgb(0, 7, 7); background-color: rgb(247, 200, 208); opacity: 0.5; font-weight: bold; margin: 2px; padding: 6px;"> 
+            <p>&nbsp;  &nbsp;&nbsp; &nbsp; Discover the true essence of Chinese and Thai cuisine at Baan Tao, where traditional flavors from Asia come to life. With a harmonious blend of nature and contemporary style, Baan Tao offers a delightful setting to savor a truly authentic meal.</p>
+
+            <p>Our award-winning restaurant takes ordinary dishes to extraordinary heights. Experience a serene ambiance as you dine amidst our 21 feet mystical waterfall on the outdoor wooden deck. At Baan Tao, you'll always find a wide array of options to indulge in and enjoy moments of tranquility.</p>
+        </div>
+        <img src="{% static 'images/Baantao-D.webp' %}" alt="Image 1">
+    </div>
+
+
+
+
+    <div class="mySlides">
+        <h1 style="text-align: center ; color: rgb(233, 160, 16); ">Café 88</h1>
+        <div style="color: rgb(0, 7, 7); background-color: rgb(247, 200, 208); opacity: 0.5; font-weight: bold; margin: 2px; padding: 6px;">
+             <p>&nbsp;  &nbsp;&nbsp; &nbsp;Welcome to Café 88, a charming restaurant filled with natural light and stunning wall windows. As you enter, you'll be greeted with friendly smiles and the delightful scent of freshly baked pizzas wafting through the air.</p> <p>&nbsp;  &nbsp;&nbsp; &nbsp; Our inviting atmosphere includes a spacious private dining area and an interactive kitchen, adding to the overall experience. Our all-day dining buffet presents a delightful fusion of global flavors and local specialties. From delectable appetizers to mouthwatering mains and irresistible desserts, our buffet is a culinary paradise that caters to every palate.</p>
+        </div>
+        <img src="{% static 'images/cafe_88-D.webp' %}" alt="Image 2">
+    </div>
+
+
+    <div class="mySlides">
+        <h1 style="text-align: center ; color: rgb(233, 160, 16); ">The Terrace Bar</h1>
+        <div style="color: rgb(0, 7, 7); background-color: rgb(247, 200, 208); opacity: 0.5; font-weight: bold; margin: 2px; padding: 6px;">
+            <p>&nbsp;  &nbsp;&nbsp; &nbsp;Indulge in elation at the Terrace Bar, where bliss comes in the form of crafted cocktails. Whether you're engaging in a friendly game of pool or cheering for your favorite team at our live screenings, our bar offers the perfect atmosphere.</p>  <p>&nbsp;  &nbsp;&nbsp; &nbsp; As you delve into our delectable Indian and Asian Tapas menu, carefully prepared with passion, you'll be treated to a truly delicious experience. We know drinks are best enjoyed in the company of the stars — so whenever you dine alfresco you'll have a tailor-made tipple in hand. If our cocktails don't do it for you, the high-energy ambiance and groovy music will have you coming back for more, for sure! </p>
+        </div>
+        <img src="{% static 'images/Bar-D.webp' %}" alt="Image 3">
+    </div>
+
+
+
+
+   
+
+
+
+
+    <div class="mySlides">
+        <h1 style="text-align: center ; color: rgb(233, 160, 16); ">In-Room Dining Services</h1>
+        <div style="color: rgb(0, 7, 7); background-color: rgb(247, 200, 208); opacity: 0.5; font-weight: bold; margin: 2px; padding: 6px;">
+            <p>&nbsp;  &nbsp;&nbsp; &nbsp;At Hyatt Pune, the convenience and comfort of our guests is our top priority. Our adept and elaborate in-room dining service is our way of creating a restaurant-quality dining experience in the privacy and comfort of a guestroom. Relish gourmet food in the comfort of your bed with our round-the-clock a-la-carte room-service menu that offers an array of breakfast options, including our delicious Indian set breakfast, Continental breakfast, or healthy breakfast delivered right to your room.  
+            </div>
+        <img src="{% static 'images/In-R-D.webp' %}" alt="Image 3">
+    </div>
+
+
+
+    <div class="mySlides">
+        <h1 style="text-align: center ; color: rgb(233, 160, 16); ">TThe Waterfall Lounge</h1>
+
+        <div style="color: rgb(0, 7, 7); background-color: rgb(247, 200, 208); opacity: 0.5; font-weight: bold; margin: 2px; padding: 6px;">
+            <p>&nbsp;  &nbsp;&nbsp; &nbsp;We’re brewing something special! </p>  <p>&nbsp;  &nbsp; &nbsp; &nbsp;With teas from around the world, signature charlies and a tall cuppa joe, The Waterfall lounge is all set to welcome you! </p><p>&nbsp;  &nbsp; &nbsp; &nbsp;Drop by for coffee, conversations and more. </p>
+        </div>
+        <img src="{% static 'images/waterfall-D.webp' %}" alt="Image 3">
+    </div>
+
+
+    <!-- Add more images as needed -->
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+</div>
+
+
+
+<script>
+    let slideIndex = 0;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        const slides = document.querySelectorAll('.mySlides');
+
+        if (n >= slides.length) {
+            slideIndex = 0;
+        }
+        if (n < 0) {
+            slideIndex = slides.length - 1;
+        }
+
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+
+        slides[slideIndex].style.display = 'block';
+    }
+</script>
+
+{% endblock content %}
+
+
+
+
+
+
+
+

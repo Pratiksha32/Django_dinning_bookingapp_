@@ -1,0 +1,203 @@
+{% extends 'bookingapp\base.html' %} 
+{% load static%}
+
+
+
+
+
+{% block content %}
+
+<!-- <h2>This is gallery page .....</h2> -->
+
+
+    <style>
+        /* Add some basic styling here, or link to an external CSS file */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url("{% static 'images/h2.jpg' %}") ;
+            /* background-repeat: no-repeat; */
+            background-size: 100%;
+  
+        
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Styling for gallery sections */
+        .gallery-section {
+            margin-bottom: 40px;
+        }
+
+        .gallery-section h2 {
+            text-align: center;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-image {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+    <div class="container">
+        <h1>GALLERY</h1><br>
+
+        <!-- Hotel Section -->
+        <div class="gallery-section">
+            <h2>Hotel</h2>
+            <div class="image-container">
+                <div class="gallery-image">
+                    <img src="{% static 'images/h1.webp' %}" alt="Hotel Image 1">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/h2.webp' %}" alt="Hotel Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/h3.webp' %}" alt="Hotel Image 2">
+                </div>
+                <!-- Add more hotel images as needed -->
+            </div>
+        </div>
+
+        <div class="gallery-section">
+            <h2>Food</h2>
+            <div class="image-container">
+                <div class="gallery-image">
+                    <img src="{% static 'images/f10.jpeg' %}" alt="Food Image 1">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/f1.jpeg' %}" alt="Food Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/f2.jpeg' %}" alt="Food Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/f3.jpeg' %}" alt="Food Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/f4.jpeg' %}" alt="Food Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/f5.jpeg' %}" alt="Food Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/f6.jpeg' %}" alt="Food Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/f7.jpeg' %}" alt="Food Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/f8.jpeg' %}" alt="Food Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/f9.jpeg' %}" alt="Food Image 2">
+                </div>
+                <!-- Add more food images as needed -->
+            </div>
+        </div>
+
+        <!-- Room Section -->
+        <div class="gallery-section">
+            <h2>Rooms</h2>
+            <div class="image-container">
+                <div class="gallery-image">
+                    <img src="{% static 'images/r1.webp' %}" alt="Room Image 1">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/r2.webp' %}" alt="Room Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/r3.webp' %}" alt="Room Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/r4.webp' %}" alt="Room Image 2">
+                </div>
+                <!-- Add more room images as needed -->
+            </div>
+        </div>
+
+        <!-- Dining Section -->
+        <div class="gallery-section">
+            <h2>Dining</h2>
+            <div class="image-container">
+                <div class="gallery-image">
+                    <img src="{% static 'images/d1.webp' %}" alt="Dining Image 1">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/d2.webp' %}" alt="Dining Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/d3.webp' %}" alt="Dining Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/d4.webp' %}" alt="Dining Image 2">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/d5.webp' %}" alt="Dining Image 2">
+                </div>
+                <!-- Add more dining images as needed -->
+            </div>
+        </div>
+
+        <!-- Food Section -->
+        <div class="gallery-section">
+            <h2>Bussiness_room</h2>
+            <div class="image-container">
+                <div class="gallery-image">
+                    <img src="{% static 'images/b1.webp' %}" alt="Food Image 1">
+                </div>
+                <div class="gallery-image">
+                    <img src="{% static 'images/b2.webp' %}" alt="Food Image 2">
+                </div>
+                <!-- Add more food images as needed -->
+            </div>
+        </div>
+
+
+        
+
+        <div class="gallery-section">
+            <h2>Pool</h2>
+            <div class="image-container">
+                <div class="gallery-image">
+                    <img src="{% static 'images/p1.webp' %}" alt="Food Image 1">
+                </div>
+                
+                <!-- Add more food images as needed -->
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+{% endblock content %}

@@ -1,0 +1,147 @@
+{% extends 'bookingapp\base.html' %} 
+{% load static%} 
+{% block content %}
+
+<style>
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: "Times New Roman", sans-serif;
+  }
+  .banner {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("{% static 'images/BANNER.jpg'%}") center/cover no-repeat;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f4f0f0;
+    text-align: center;
+  }
+  .card-container {
+    display: grid;
+    /* align-items: center; */
+    grid-template-columns: 320px 320px;
+  }
+  .card-img {
+    background: url("{% static 'images/card2-img.jpg'%}") center/cover no-repeat;
+  }
+  .banner h2 {
+    /* padding-bottom: 20px;
+        padding-top: 20px; */
+    /* margin-top: 20px;
+        margin-bottom: 20px; */
+    padding: auto;
+    margin: auto;
+    align-items: center;
+  }
+  .card-content {
+    background-color: rgb(255, 192, 203);
+    height: 330px;
+    width: fit-content;
+    /* opacity: 0.1; */
+  }
+  .card-content h3 {
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+
+    padding: 25px 10px 10px 30px;
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .form-row {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+  }
+  form select,
+  form input {
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: "Times New Roman", sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+  }
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="date"],
+  form input::placeholder,
+  select {
+    color: black;
+    font-weight: bold;
+  }
+  form input[type="submit"] {
+    color: #eee;
+    background: #f3931d;
+    padding: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  form input[type="submit"]:hover {
+    opacity: 0.9;
+  }
+  @media (max-width: 1000px) {
+    .card-container {
+      grid-template-columns: 100%;
+    }
+    .card-img {
+      height: 250px;
+    }
+  }
+</style>
+
+<section
+  class="banner"
+  style="display: block; margin-left: auto; margin-right: auto; width: 100%">
+  <div style="margin-left: 100px; margin-right: 100px ; padding: 20px 100px 20px 200px;">
+  <h2>BOOK YOUR TABLE NOW</h2>
+
+  <div style="align-items: center; margin-top: 60px;">
+  <div class="card-container" style="position: absolute; margin-left: 200px">
+    <div class="card-img"></div>
+
+    <div class="card-content" style="opacity: 0.6">
+      <h3>RESERVATION</h3>
+      <form action="/bookingapp/book/" method="post"> {% csrf_token%}
+
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Full Name" />
+          <input type="text" name="mobile" placeholder="Phone Number" />
+        </div>
+
+        <div class="form-row">
+          <input type="date" name="checkin" placeholder="Check-In" />
+          <input type="date" name="checkout" placeholder="Check-Out" />
+        </div>
+
+        <div class="form-row">
+          <select class="room" name="roomtype" >
+
+            <option value="dining type"> DINING </option>
+            <option value="Baan Tao">Baan Tao</option>
+            <option value="Café 88">Café 88</option>
+            <option value="The Terrace Bar">The Terrace Bar</option>
+            <option value="The Waterfall Lounge">The Waterfall Lounge</option>
+            <option value="In-Room Dining Services">In-Room Dining Services</option>
+          </select>
+          <input type="Submit" value="BOOK TABLE" />
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+</div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,62 @@
+{% extends 'bookingapp\base.html' %} 
+{% load static%}
+
+
+<!-- <h2>This is index page of The royal express.....</h2> -->
+
+
+{% block content %}
+
+<main>
+    
+    <video
+  class="video-player-video"
+  width="946.4px"
+  muted="muted"
+  playsinline="playsinline"
+  webkit-playsinline="webkit-playsinline"
+  x-webkit-airplay="allow"
+  poster="data:image/gif,AAAA"
+  autoplay="autoplay"
+  loop="loop"
+  preload="auto"
+  height="468.2708333333333px"
+  style="
+
+    
+    
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    
+  "
+  data-width="1920"
+  data-height="950"
+>
+  <source
+    src="{% static 'videos/hyatt_pune.webm'%}"
+    data-src="https://videos.hyatt.com/hyatt_pune.mp4"
+    type="video/mp4"
+    style="user-select: auto"
+    
+  />
+
+  " Your browser does not support the video tag. "
+</video>
+
+
+
+
+
+</main>
+
+
+{% endblock content %}
+
+
+
+
+
+
+

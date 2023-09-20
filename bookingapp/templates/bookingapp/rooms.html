@@ -1,0 +1,376 @@
+{% extends 'bookingapp\base.html' %} 
+{% load static%}
+
+
+
+
+
+{% block content %}
+
+
+    
+
+
+
+
+
+        <style>
+            * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* background-image: url("{% static 'images/rb1.jpeg' %}") ; */
+    
+        
+
+
+  }
+        .image-container {
+            width: 1500px;
+            height: 1200px;
+            overflow: hidden;
+            margin-top: 0px; 
+            /* background-color: #e7dede;
+    background-size: 100%;    */
+            }
+
+        .image-slider {
+            display: flex;
+            animation: slide 50s linear infinite paused ;
+        }
+
+        .image {
+            width: 1500px;
+            height: 700px;
+            margin-right: 60px;
+            margin-left: 60px;
+            /* margin-top: 60px; */
+            cursor: pointer; /* Add cursor pointer to indicate interactivity */
+
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(-200%);
+            }
+            75% {
+                transform: translateX(-300%);
+            }
+            100% {
+                transform: translateX(-400%);
+            }
+        }
+
+
+        #myList {
+            display: none;
+            list-style-type: disc;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+
+    <div class="image-container">
+        <div class="image-slider">
+            
+
+
+
+
+
+
+            <div>
+                <img class="image" src="{% static 'images/deluxe_king.webp' %}" alt="Image 1">  
+                <h3>Deluxe King Room</h3>
+                <p>This 325 sq. ft. guestroom boasts a comfortable king bed,extensive wardrobe & separate work area. Impressive views of the serene landscape & well-appointed bathroom with a walk-in shower reinforce a sense of opulence</p>
+                
+                <button id="button1">Amenities</button>
+                <ol class="hidden" id="list1"  >
+                    <li>32-inch LCD TV</li>
+                    <li>High-speed internet access</li>
+                    <li>Bathroom with walk-in shower</li>
+                    <li>Individual air conditioning control</li>
+                    <li>Separate work area</li>
+                    <li>Hairdryer, bathrobes &amp; Slippers</li>
+                    <li>Tea/ coffee setup</li>
+                    <li>Well-stocked Minibar</li>
+                    <li>Iron and ironing board</li>
+                    <li>In-room safe</li>
+                    <li>Morning newspaper on request</li>
+                    <li>Crib upon request</li>
+                    <li>24-hour concierge</li>
+                </ol>
+               
+
+            </div>
+
+            
+            
+            
+            <div>
+                <img class="image" src="{% static 'images/Bussiness_room.webp' %}" alt="Image 1">
+                <h3>Business Room </h3>
+                <p>Gaze out floor-to-ceiling windows in this 270 sq. ft. room with one king bed and featuring a spacious work desk and modern bath with walk-in shower. Featuring modern décor and a beautiful style, our Business Rooms offers high speed internet access to ensure a well-connected stay.</p>
+                <p>Enjoy added benefits of 1 hour of complimentary IMFL between 7 PM to 9 PM at designated venue.
+                </p>
+                
+                <button id="button2">Amenities</button>
+                <ol class="hidden" id="list2" >
+                    <li>32-inch LCD TV</li>
+                    <li>High-speed internet access</li>
+                    <li>Bathroom with walk-in shower</li>
+                    <li>Individual air conditioning control</li>
+                    <li>Separate work area</li>
+                    <li>Hairdryer, bathrobes &amp; Slippers</li>
+                    <li>Tea/ coffee setup</li>
+                    <li>Well-stocked Minibar</li>
+                    <li>Iron and ironing board</li>
+                    <li>In-room safe</li>
+                    <li>Morning newspaper on request</li>
+                    <li>Crib upon request</li>
+                    <li>24-hour concierge</li>
+                </ol>
+                
+
+            </div>
+
+                    
+            
+            
+            <div>
+                <img class="image" src="{% static 'images/pool_view_king.webp' %}" alt="Image 1">
+                <h3>Pool View king</h3>
+                <p>Contemporary design and modern art highlight this 270 sq. ft. room with a king bed &amp; large bay windows, with panoramic views. The room is well equipped with a minibar and lavish bathroom amenities.
+                </p>
+                
+                <button id="button3">Amenities</button>
+                <ol class="hidden" id="list3" style="list-style-type: disc;" >
+                    <li>32-inch LCD TV</li>
+                    <li>High-speed internet access</li>
+                    <li>Bathroom with walk-in shower</li>
+                    <li>Individual air conditioning control</li>
+                    <li>Separate work area</li>
+                    <li>Hairdryer, bathrobes &amp; Slippers</li>
+                    <li>Tea/ coffee setup</li>
+                    <li>Well-stocked Minibar</li>
+                    <li>Iron and ironing board</li>
+                    <li>In-room safe</li>
+                    <li>Morning newspaper on request</li>
+                    <li>Crib upon request</li>
+                    <li>24-hour concierge</li>
+                </ol>
+
+              
+                
+
+            </div>
+
+                    
+            
+            
+            <div>
+                <img class="image" src="{% static 'images/Bussiness-Twin.webp' %}" alt="Image 1">
+                <h3>Business Twin Room</h3>
+                <p>Experience a welcoming ambiance in our 270 sq. ft. room, tastefully adorned with contemporary design, featuring Twin beds. Work with ease, and indulge in a relaxing walk-in shower.</p>
+                
+                <button id="button4">Amenities</button>
+                <ol class="hidden" id="list4" style="list-style-type: disc;" >
+                    <li>32-inch LCD TV</li>
+                    <li>High-speed internet access</li>
+                    <li>Bathroom with walk-in shower</li>
+                    <li>Individual air conditioning control</li>
+                    <li>Separate work area</li>
+                    <li>Hairdryer, bathrobes &amp; Slippers</li>
+                    <li>Tea/ coffee setup</li>
+                    <li>Well-stocked Minibar</li>
+                    <li>Iron and ironing board</li>
+                    <li>In-room safe</li>
+                    <li>Morning newspaper on request</li>
+                    <li>Crib upon request</li>
+                    <li>24-hour concierge</li>
+                </ol>
+                
+
+            </div>
+
+                    
+            
+            
+            <div>
+                <img class="image" src="{% static 'images/Executive-Suite.webp' %}" alt="Image 1">
+                <h3>Executive Suit</h3>
+
+                <p>Indulge in a regal 630 sq. ft. suite appointed with one king bed, a work desk, and a separate dining and living area. Brew a fresh cup of coffee, as you make yourself at home in our cozy, urban bedroom, and enjoy your business/family trip.</p>
+                <p>Admire the fabulous views overlooking the serene landscape, and stay connected with Wi-Fi.</p>
+                <p>This is a premium suite. See World of Hyatt program terms for upgrade eligibility.
+                </p>
+                
+                <button id="button5">Amenities</button>
+                <ol class="hidden" id="list5">
+                    <li>High-speed internet access</li>
+                    <li>Separate work area</li>
+                    <li>49 inch LED TV</li>
+                    <li>Bathroom with walk-in shower</li>
+                    <li>Crib on-request</li>
+                    <li>Hairdryer, bathrobes, and slippers</li>
+                    <li>Individual air conditioning control</li>
+                    <li>Iron and ironing board</li>
+                    <li>Tea/ coffee setup and minibar</li>
+                    <li>24-hour concierge</li>
+                    <li>In-room safe</li>
+                    <li>Morning newspaper on request</li>
+                    <li>Well-stocked Minibar</li>
+                </ol>
+                
+
+            </div>
+
+                    
+            
+            
+            <div>
+                <img class="image" src="{% static 'images/Garden-Suite.webp' %}" alt="Image 1">
+                <h3>Garden Suitem</h3>
+                <p>Evoking a peaceful ambiance that enhances your relaxation is our 600 sq. ft. Garden Suite, which offers you your very own walk-in private garden with a sundeck for the serenity you deserve.</p>
+                <p>This chic suite offers the opulence of delightful amenities, a tea/coffee setup, and floor-to-ceiling bay windows through which natural sunlight radiates. </p>
+                <p>This is a Garden Suite. See World of Hyatt program terms for upgrade eligibility.
+                </p>
+                
+                <button id="button6">Amenities</button>
+                <ol class="hidden" id="list6">
+                    <li>Balcony/sun deck</li>
+                    <li>High-speed internet access</li>
+                    <li>Separate work area</li>
+                    <li>49-inch LED TV</li>
+                    <li>Crib on request</li>
+                    <li>Bathroom with walk-in shower</li>
+                    <li>Iron and ironing board</li>
+                    <li>Hairdryer, bathrobes, and slippers</li>
+                    <li>Individual air conditioning control</li>
+                    <li>Tea /coffee setup and minibar</li>
+                    <li>24-hour concierge</li>
+                    <li>In-room safe</li>
+                    <li>Morning newspaper on request</li>
+                    <li>Well-stocked minibar</li>
+                </ol>
+               
+                
+
+            </div>
+
+                    
+            
+            
+            <div>
+                <img class="image" src="{% static 'images/Hyatt-Suite.webp' %}" alt="Image 1">
+                <h3>Hyatt Suite</h3>
+                <h6>Most Beautiful</h6>
+                <p>Enjoy a well-deserved rest in our sophistically designed Hyatt Suite offering 500 sq. ft. of thoughtfully designed furniture and decor with contemporary comforts and amenities.</p>
+                <p>Experience the exquisite charm of a walk-in wardrobe and a living area adorned with delightful views. Lavish bath amenities and a mini fridge are available for your convenience, while 49 inches LED TV, floor-to-ceiling windows and high speed internet services allow guests to stay connected.</p>
+                <p>This is a standard suite. See World of Hyatt program terms for upgrade eligibility.
+                </p>
+                
+                <button id="button7">Amenities</button>
+                <ol class="hidden" id="list7">
+                    <li>High-speed internet access</li>
+                    <li>Separate work area</li>
+                    <li>49 inch LED TV</li>
+                    <li>Bathroom with walk-in shower</li>
+                    <li>Crib on request</li>
+                    <li>Hairdryer, bathrobes, and slippers</li>
+                    <li>Individual air conditioning control</li>
+                    <li>Iron and ironing board</li>
+                    <li>Tea/coffee setup and minibar</li>
+                    <li>24-hour concierge</li>
+                    <li>In-room safe</li>
+                    <li>Morning newspaper on request</li>
+                    <li>Well-stocked Minibar</li>
+                </ol>
+                
+
+            </div>
+
+                    
+            
+            
+           
+
+                    
+            
+            
+
+
+
+
+
+
+
+            <!-- <section class="booking-form">
+                    
+                <button><a href="/bookingapp/book/"> Book Now </a></button>
+                     <input type="submit"  action="/bookingapp/book/" value="Book Now">  
+            </section> -->
+
+
+
+
+           
+
+
+
+
+
+
+        </div>
+    </div>
+ 
+    
+
+
+    <script>
+        const slider = document.querySelector(".image-slider");
+        const images = document.querySelectorAll(".image");
+
+        images[0].addEventListener("load", () => {
+            setTimeout(() => {
+                slider.style.animationPlayState = "running";
+            }, 2500); // Display the first image for 1 minute (60000 milliseconds)
+        });
+
+        images.forEach(image => {
+            image.addEventListener("click", toggleAnimation);
+        });
+
+        function toggleAnimation() {
+            if (slider.style.animationPlayState === "paused") {
+                slider.style.animationPlayState = "running";
+            } else {
+                slider.style.animationPlayState = "paused";
+            }
+        }
+
+
+        const buttons = document.querySelectorAll("button");
+        buttons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                const list = document.getElementById(`list${index + 1}`);
+                list.classList.toggle("hidden");
+            });
+        });
+
+
+        
+       
+    </script>
+
+
+{% endblock content %}

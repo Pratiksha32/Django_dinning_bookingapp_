@@ -1,0 +1,80 @@
+{% extends 'bookingapp\base.html' %} 
+{% load static%}
+
+
+
+
+
+{% block content %}
+
+<!-- <h2>contact US </h2> -->
+
+
+    <style>
+        /* Add some basic styling here, or link to an external CSS file */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fbf8f8;
+            margin: 0;
+            padding: 0;
+            background-image: url("{% static 'images/c1.jpg' %}") ;
+        
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(255, 206, 115);
+            box-shadow: 0 0 10px rgb(5, 0, 0);
+            opacity: 0.7;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Styling for contact blocks */
+        .contact-block {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .contact-block img {
+            width: 100px; /* Adjust image size as needed */
+            height: auto;
+        }
+    </style>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+
+        <!-- Address Block -->
+        <div class="contact-block">
+            <img src="{% static 'images/address-icon.jpeg' %}" alt="Address Icon">
+            
+            <h2>Address</h2>
+            <p>Get in Touch for Special Offers and Discounts.</p>
+            <p>Gorhe Khurd, Donje, Panshet Rd, </p>
+            <p>Pune 411025</p>
+        </div>
+
+        <!-- Contact Number Block -->
+        <div class="contact-block">
+            <img src="{% static 'images/phone-icon.png' %}" alt="Phone Icon">
+            <h2>Contact Number</h2>
+            <p>Phone: +91 8308408362</p>
+            <p>Phone: +1 8600469293</p>
+        </div>
+
+        <!-- Email Block -->
+        <div class="contact-block">
+            <img src="{% static 'images/email-icon.png' %}" alt="Email Icon">
+            <h2>Email</h2>
+            <p>Email: royalexpress@gmail.com</p>
+        </div>
+    </div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,76 @@
+{% extends 'bookingapp\base.html' %} 
+{% load static%} 
+{% block content %}
+
+
+
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+  }
+  body {
+    font-family: "Times New Roman", sans-serif;
+   
+  }
+
+.banner {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),url("{% static 'images/display_Hyatt.jpg'%}") center/cover no-repeat;
+    display: block;
+    color: #f4f0f0;
+    text-align: center;
+}
+
+
+</style>
+
+<div class="banner">
+<div style="margin-left: 100px; margin-right: 100px ; padding: 20px 100px 20px 200px;" >   
+<h2 >YOUR BOOKING STATUS </h2>
+
+
+<table class="table" style="border-color: rgb(90, 220, 246); color: black; background-color: rgb(243, 242, 245) ; opacity: 0.9;">
+    <thead>
+      <tr>
+        <th scope="col">Booking ID</th>
+        <th scope="col">name</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">checkin</th>
+        <th scope="col">checkout</th>
+        <th scope="col">Dining</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for i in data %}
+        <tr>
+            
+            <td>{{i.id}}</td>
+            <td><a href="/bookingapp/update/{{i.id}}/">{{i.name}}</a></td>
+            <td>{{i.mobile}}</td>
+            <td>{{i.checkin}}</td>
+            <td>{{i.checkout}}</td>
+            <td>{{i.roomtype}}</td>
+        </tr>
+        
+        {% endfor %}  
+        
+    </tbody>
+  </table> 
+
+
+
+
+    <!-- {{data}} -->
+
+</div>
+</div> 
+
+
+{% endblock content %}

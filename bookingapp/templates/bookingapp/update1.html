@@ -1,0 +1,136 @@
+{% extends 'bookingapp\base.html' %} 
+{% load static%} 
+{% block content %}
+
+<!-- <style>
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+  }
+  body {
+    font-family: "Times New Roman", sans-serif;
+   
+  }
+  .banner {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("{% static 'images/BANNER.jpg'%}") center/cover no-repeat;
+    display: block;
+    
+    
+    /* align-items: center; */
+    color: #f4f0f0;
+    text-align: center;
+  }
+
+  h2{
+    color: #eee;
+    text-align: center;
+
+    padding: 20px 20px 20px 20px;
+
+  }
+  
+</style>
+
+<section
+  class="banner">
+  <h2 style=  "text-align: right;">YOUR BOOKING STATUS </h2>
+  <!-- <div class="card-container" style="position: absolute; margin-left: 300px">
+    <div class="card-img"></div>
+
+    <div class="card-content" style="opacity: 0.6">
+      <h3>RESERVATION</h3> -->
+
+      
+      
+
+
+
+
+
+    <!-- </div>
+  </div>
+</section> --> 
+
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+  }
+  body {
+    font-family: "Times New Roman", sans-serif;
+   
+  }
+
+.banner {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("{% static 'images/BANNER.jpg'%}") center/cover no-repeat;
+    display: block;
+    color: #f4f0f0;
+    text-align: center;
+}
+
+
+</style>
+
+div style="margin-left: 100px; margin-right: 100px ; padding: 20px 100px 20px 200px;" >   
+<h2 >{{data.name}} YOUR UPDATE STATUS </h2><div class="banner">
+<
+
+
+
+<form action="/bookingapp/update/{{data.id}}/" method="post"> {% csrf_token%}
+
+  <div class="form-row">
+    <input type="text" name="name" value ={{data.name}} />
+    <input type="text" name="mobile" value ={{data.mobile}} />
+  </div>
+
+  <div class="form-row">
+    <input type="date" name="checkin" value = {{data.checkin}} />
+    <input type="date" name="checkout" value = {{data.checkout}} />
+  </div>
+
+  <div class="form-row">
+    <select class="room" name="roomtype"  value = {{data.roomtype}}>
+
+      <option value="dining type"> DINING </option>
+      <option value="Baan Tao">Baan Tao</option>
+      <option value="Café 88">Café 88</option>
+      <option value="The Terrace Bar">The Terrace Bar</option>
+      <option value="The Waterfall Lounge">The Waterfall Lounge</option>
+      <option value="In-Room Dining Services">In-Room Dining Services</option>
+    </select>
+    
+  </div>
+</form>
+<div class="form-row">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+  <button type="submit" style='margin-right: 300px; margin-left: 20px;'  class="btn btn-warning btn-lg"> Update</button>  
+  <!-- &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; -->
+  <div style='margin-right:100px' class="d-grid gap-2 d-md-flex justify-content-md-start"> 
+  <a href="/bookingapp/delete/{{data.id}}/" class="btn btn-warning btn-lg"> DELETE </a>
+
+</div>
+</div>
+
+
+       
+
+
+
+
+    <!-- {{data}} -->
+
+</div>
+</div> 
+
+
+{% endblock content %}

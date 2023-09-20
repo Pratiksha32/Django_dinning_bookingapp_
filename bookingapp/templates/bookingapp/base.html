@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/booking.css' %}" />
+    <!-- CSS only -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/707bc7f95b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z4SCTJLJHB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-Z4SCTJLJHB");
+    </script>
+    <title>The Royal Express- Hyatt</title>
+    <meta name="title" content="Home - Royal Express Resort" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Sunshine Resort, Service in Gorhe Khurd, Panshet, Khadakwasla, Pune"
+    />
+    <meta name="robots" content="all" />
+    <meta name="application-name" content="Sunshine Resort" />
+    <meta property="og:title" content="Home - Sunshine Resort" />
+    <meta property="og:site_name" content="Sunshine Resort" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://sunshineresortpune.com/assets/img/logo.png"
+    />
+  </head>
+  <body>
+    <!-- <header class="sticky-top">
+            <nav class="navbar navbar-expand-lg bg-light border-bottom shadow-sm">
+                <div class="container">
+                    <a class="p-0 navbar-brand" href="https://sunshineresortpune.com/">
+                        <img src="{% static 'images/HYATT.png' %}" alt="logo" width="150" height="70">
+                      </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="b-row display-xl-block display-xx-block nav-row" style="user-select: auto;">
+                    <div class="b-col-12@xs" style="user-select: auto;">
+                    
+                    <nav class="navigation" data-locator="navigation" style="user-select: auto;">
+                        <ul class="list-inline">
+                            <li class="active b-text_weight-bold">
+                                <a href="" class="text-uppercase">Hotel</a>
+                            </li>
+                        
+                            <li class="b-text_weight-normal">
+                                <a href="" class="text-uppercase">Rooms</a>
+                            </li>
+                        
+                            <li class="b-text_weight-normal">
+                                <a href="" class="text-uppercase">Area Attractions</a>
+                            </li>
+                        
+                            <li class="b-text_weight-normal">
+                                <a href="" class="text-uppercase">Dining</a>
+                            </li>
+                        
+                            <li class="b-text_weight-normal">
+                                <a href="" class="text-uppercase">Special Events</a>
+                            </li>
+                        
+                            <li class="b-text_weight-normal">
+                                <a href="" class="text-uppercase">Photos + Reviews</a>
+                            </li>
+                        
+                            <li class="b-text_weight-normal">
+                                <a href="" class="text-uppercase">Offers</a>
+                            </li>
+                        </ul>
+                    
+                    
+                    
+                    </nav>
+                    </div>
+                    </div>
+
+                            <div class="mobile-button" data-js="narrow-site-header">
+                                <button type="submit" bw-rebook="" class="quickbookSearchFormButton b-button b-button_icon-down b-button-shop b-button-block b-button_icon-down" data-toggle="modal" data-modal-selector="#quickbook" data-modal-class="quickbook-modal" data-has-quickbook="true" data-modal-clear="true" data-js-event-name="sc_page_title--||--page_type" data-js-event-value="Property:SearchBoxModal--||--searchbox_modal" data-js-event-type="page" data-update-url="true" ng-click="showQuickbook($event)" data-js="interaction-observer">
+                                    Book Now
+                                </button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header> -->
+    <header class="sticky-top">
+      <nav class="main" style="width: 100%;" >
+        <!-- <div class="logo font-bold flex items-center text-blue"></div> -->
+
+        <div >
+          
+          <ul style="margin-top: 15px;" >
+            
+              <!-- <a class="logo" href="/bookingapp/index/">
+                <img
+                  src="{% static 'images/HYATT.png' %}"
+                  alt="logo"
+                  width="40"
+                  height="50"
+                  style="margin: 20px 10px 20px 10px;"
+                />
+              </a>  -->
+            
+
+
+            <li>
+              <a href="/bookingapp/index/" class="text-uppercase">Hotel</a>
+            </li>
+  
+            <li>
+              <a href="/bookingapp/room/" class="text-uppercase">Rooms</a>
+            </li>
+  
+            <!-- <li>
+              <a href="" class="text-uppercase">Area Attractions</a>
+            </li> -->
+  
+            <li>
+              <a href="/bookingapp/dinning/" class="text-uppercase">Dining</a>
+            </li>
+  
+            <!-- <li>
+              <a href="" class="text-uppercase">Special Events</a>
+            </li> -->
+  
+            <li>
+              <a href="/bookingapp/gallery/" class="text-uppercase">Photos</a>
+            </li>
+  
+            <li>
+              <a href="/bookingapp/menu/" class="text-uppercase">MENU</a>
+            </li>
+            <li>
+              <a href="/bookingapp/contact/" class="text-uppercase">Contact Us</a>
+            </li>
+  
+            <li class="active">
+              <a href="/bookingapp/book/" class="text-uppercase">Book Now</a>
+            </li>
+  
+            <!-- <li>
+                          <button type="submit" bw-rebook="" class="quickbookSearchFormButton b-button b-button_icon-down b-button-shop b-button-block b-button_icon-down" data-toggle="modal" data-modal-selector="#quickbook" data-modal-class="quickbook-modal" data-has-quickbook="true" data-modal-clear="true" data-js-event-name="sc_page_title--||--page_type" data-js-event-value="Property:SearchBoxModal--||--searchbox_modal" data-js-event-type="page" data-update-url="true" ng-click="showQuickbook($event)" data-js="interaction-observer">
+                              Book Now
+                          </button>
+  
+                      </li> -->
+          </ul>
+        </div >
+        
+      </nav>
+     
+    </header>
+
+    {% block content %} 
+
+
+    {% endblock content %}
+
+    <!-- footer -->
+    <footer class="pt-2 border-top bg-light" style="padding: 0; margin: 0; background-color:rgba(247, 208, 141, 0.733);" >
+            <div class="container">
+                <div class="row text-muted p-2" style="background-color:rgba(247, 208, 141, 0.733);">
+                    <div class="col-sm">
+                        <h5>For Bookings</h5>
+                        <h6 class="contact-number pt-1"><i class="fas fa-phone-alt"></i><a href="tel:+918308408362" class="footer-menus">+91 8308408362</a></h6>
+                        <h6 class="contact-number pb-1"><i class="fas fa-phone-alt"></i><a href="tel:+918308408362" class="footer-menus">+91 8308408362</a></h6>
+                        <h5>
+                            <a class="p-2" href="#"><i class="fab fa-facebook fa-2x social-fb"></i></a>
+                            <a class="p-2" href="#"><i class="fab fa-instagram fa-2x social-ig"></i></a>
+                            <a class="p-2" href="#"><i class="fab fa-whatsapp fa-2x social-wa"></i></a>
+                        </h5>
+                    </div>
+                    <div class="col-sm">
+                        <h5>Address</h5>
+                        <p>Get in Touch for Special Offers and Discounts.</p>
+                        <p><i class="fas fa-map-marked-alt"></i>Pune</p>
+                        <p><i class="fas fa-envelope"></i><a class="footer-menus" href="mailto: pratiksha8362@gmail.com">royalexpress@gmail.com</a></p>
+                    </div>
+                    <div class="col-sm">
+                        <h5>Sitemap</h5>
+                        <ol class="foot">
+                            <li><a href="/bookingapp/menu/" >Food Menu</a></li>
+                            <li><a href="/bookingapp/room/" >Rooms</a></li>
+                            <!-- <li><a href="privacy.html" >Privacy Policy</a></li> -->
+                            <!-- <li><a href="terms.html" >Terms Of Use</a></li> -->
+                            <li><a href="/bookingapp/contact/" >Contact Us</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="container border-top small text-muted" style="background-color:rgba(247, 208, 141, 0.733);">
+                <div class="row py-3">
+                    <div class="col-sm-8">
+                        Copyright &copy;2022 <a href="/">Royal Express Resort</a> All rights reserved.
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    <!-- <footer>
+      <div class="site-footer component mb0">
+        <div class="b-container">
+          <div class="b-row">
+            <div class="left-column">
+              <div class="address">
+                <p>
+                  <a
+                    class="google-map-link-unwrap"
+                    href="https://www.google.com/maps/search/?api=1&query=Adjacent+to+Aga+Khan+Palace%2C+88+Nagar+Road%2C+Kalyani+Nagar%2C+Pune%2C+Maharashtra%2C+India%2C+411006"
+                    target="_blank"
+                    data-js-event-name="onsite_click_element"
+                    data-js-event-value="property:footer:googlemaplink"
+                    data-js-event-type="event"
+                    style="display: block"
+                  >
+                    Adjacent to Aga Khan Palace, 88 Nagar Road, Kalyani Nagar,
+                    Pune, Maharashtra, India, 411006<br />
+                  </a>
+
+                  Tel:
+                  <a
+                    href="tel:+91%2020%204141%201234"
+                    data-js-event-name="onsite_click_element"
+                    data-js-event-value="property:footer:phonenumberlink"
+                    data-js-event-type="event"
+                    >+91 20 4141 1234</a
+                  >
+                  | Fax:
+                  <a
+                    href="tel:+91%2020%204141%201235"
+                    data-js-event-name="onsite_click_element"
+                    data-js-event-value="property:footer:faxnumberlink"
+                    data-js-event-type="event"
+                    >+91 20 4141 1235</a
+                  >
+
+                  |
+                  <a
+                    href="mailto:pune.hyatthotels@hyatt.com"
+                    data-js-event-name="onsite_click_element"
+                    data-js-event-value="property:footer:emaillink"
+                    data-js-event-type="event"
+                    >pune.hyatthotels@hyatt.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="right-column">
+              <nav role="navigation">
+                <ul class="list-inline">
+                  <li>
+                    <a
+                      href="https://assets.hyatt.com/content/dam/hyatt/hbm/hyatt/pnqhy/01/PNQHY_Pune_Fact_Sheet_33852.pdf"
+                      target="_blank"
+                      >Fact Sheet</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://hyatt.taleo.net/careersection/10880/jobsearch.ftl?location=120360210089&organization=148260210089&src=CWS-1&searchExpanded=false"
+                      target="_blank"
+                      >Careers</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+           SDI include (path: /content/hotel/propertysites/hyatt/pnqhy/en_US/rooms/_jcr_content/chaseoffer.sdi.html/property-sites/components/content/chaseoffer, resourceType: property-sites/components/content/chaseoffer)
+         -->
+        <!-- </div>
+      </div>
+
+      <script
+        async
+        src="https://www.hyatt.com/hds/bookends/1.latest/ecommerce/en-US/bookends.min.js"
+        data-bookends="script"
+      ></script>
+
+      <div data-bookends="brand-bar" data-prop-domain="hyatt.com"></div>
+
+      <div data-bookends="ecom-footer" data-prop-domain="hyatt.com"></div>
+      <div data-bookends="legal-footer" data-prop-domain="hyatt.com"></div>
+    </footer> -->
+  </body>
+</html>
